@@ -1,7 +1,7 @@
 Package.describe({
   name: 'hharnisc:meteor-nock',
   summary: "Meteor smart-package for nock (https://github.com/pgte/nock)",
-  version: "0.1.1",
+  version: "0.1.2",
   git: "https://github.com/hharnisc/meteor-nock.git",
   documentation: 'README.md',
   debugOnly: true
@@ -12,5 +12,6 @@ Npm.depends({
 });
 
 Package.on_use(function (api, where) {
+  api.export('Nock');
   api.add_files('server/server.js', 'server');
 });
